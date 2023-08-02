@@ -1,0 +1,164 @@
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bgPrimary: #331d2c;
+  --bgSecon: #3f2e3e;
+  --colorPrimary: #efe1d1;
+}
+body {
+  background-color: var(--bgPrimary);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--bgSecon);
+  padding: 10px;
+  /* width: 50%; */
+  width: 30%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+.judul {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 5px 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: var(--colorPrimary);
+  font-family: fantasy;
+  font-weight: normal;
+}
+.judul h1 {
+  font-size: 20px;
+}
+.judul p {
+  display: none;
+  font-family: cursive;
+  font-size: 10px;
+  color: red;
+}
+.kotakinput {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  width: 100%;
+}
+.kotakinput .isian {
+  background: var(--bgPrimary);
+  border-radius: 8px;
+  padding: 0 15px;
+  border: none;
+  color: var(--colorPrimary);
+  width: 80%;
+  height: 40px;
+}
+.isian::placeholder {
+  color: var(--colorPrimary);
+}
+.isian:focus {
+  outline: none;
+}
+.kotakinput .tambah {
+  width: 15%;
+  background-color: var(--bgPrimary);
+  border: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 8px;
+  color: var(--colorPrimary);
+  transition: 0.7s ease-in-out;
+}
+.tambah:hover {
+  background-color: green;
+  color: var(--colorPrimary);
+  cursor: pointer;
+}
+.list {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.list .list-item {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.list-value {
+  display: block;
+  line-height: 40px;
+  background-color: var(--bgPrimary);
+  border-radius: 8px;
+  padding: 0 15px;
+  border: none;
+  color: var(--colorPrimary);
+  width: 80%;
+  height: 40px;
+  transition: 0.7s ease-in-out;
+}
+
+.selesai {
+  background-color: green;
+  color: var(--colorPrimary);
+  text-decoration: line-through 2px black;
+}
+.hapus {
+  width: 15%;
+  font-size: 20px;
+  border-radius: 8px;
+  border: none;
+  color: red;
+  background-color: var(--colorPrimary);
+  transition: 0.7s ease-in-out;
+}
+.hapus:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .container {
+    width: 55%;
+  }
+
+  .kotakinput .tambah {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .kotakinput {
+    gap: 10px;
+  }
+  .kotakinput .isian {
+    text-align: center;
+    width: 100%;
+  }
+  .kotakinput .tambah {
+    width: 100%;
+  }
+  .list-item {
+    gap: 4px;
+  }
+}
